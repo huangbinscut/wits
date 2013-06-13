@@ -72,8 +72,11 @@ $(function() {
 	
 	// Dialog
 	$('#dialogRobotSetting').dialog({
+		modal : true,
 		autoOpen : false,
 		width : 500,
+		draggable : true,
+		resizable : false,
 		buttons : {
 			"确认" : function() {
 				$(this).dialog("close");
