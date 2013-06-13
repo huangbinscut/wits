@@ -1,0 +1,51 @@
+<?xml version="1.0"?> 
+  
+<!-- Copyright : wits.tel , 2012 -->
+  
+<project name="wits" basedir="." default="build"> 
+	<property file="ant.properties"/> 
+    <property name="src.dir" value="src"/> 
+    <property name="war.dir" value="WebContent"/> 
+    <property name="build.dir" value="${war.dir}/WEB-INF/classes"/> 
+    <property name="deploy.path" value="${tomcat.home}/webapps"/> 
+    <property name="name" value="wits"/> 
+  
+    <path id="master-classpath"> 
+        <fileset dir="${war.dir}/WEB-INF/lib"> 
+        	<include name="*.jar"/> 
+        </fileset> 
+  
+        <fileset dir="${tomcat.home}/lib"> 
+            <include name="servlet*.jar"/> 
+        </fileset> 
+        <pathelement path="${build.dir}"/> 
+    </path> 
+  
+    <target name="build" description="Compile main source tree java files"> 
+        <echo>Building...</echo> 
+        <mkdir dir="${build.dir}"/> 
+        <javac destdir="${build.dir}" failonerror="true" includeantruntime="on"> 
+            <src path="${src.dir}"/> 
+            <classpath refid="master-classpath"/> 
+        </javac> 
+    </target> 
+  
+    <target name="war-archiving"> 
+        <echo>Archiving...</echo> 
+        <war destfile="${name}.war" webxml="${war.dir}/WEB-INF/web.xml"> 
+            <fileset dir="${war.dir}"> 
+                <include name="**/*.*"/> 
+            </fileset> 
+        </war> 
+    </target> 
+  
+    <target name="deploy" depends="build"> 
+        <echo>Deploying...</echo> 
+        <copy todir="${deploy.path}"> 
+            <fileset dir="."> 
+                <include name="*.war"/> 
+            </fileset> 
+        </copy> 
+    </target> 
+  
+</project>

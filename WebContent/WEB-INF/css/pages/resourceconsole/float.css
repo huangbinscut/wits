@@ -1,0 +1,34 @@
+
+
+.a_fl, .a_fr { 
+	float: right; 
+	position: fixed; 
+	top: 180px; 
+	z-index: 100; 
+}
+
+.a_fl { 
+	left: 0; 
+}
+
+.a_fr { 
+	right: 0; 
+	text-align: right; 
+}
+    
+* html .a_fl, * html .a_fr { 
+	position: absolute; 
+	top: expression(offsetParent.scrollTop+180);  
+}
+
+.a_fl a, .a_fr a { 
+	display:block; 
+	font-size:10px;
+	text-align:center; 
+}
+        
+        
+        
+        
+        
+        
