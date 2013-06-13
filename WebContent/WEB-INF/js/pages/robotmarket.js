@@ -71,33 +71,34 @@ $(function() {
 	
 	
 	// Dialog
-	$('#dialog').dialog({
+	$('#dialogRobotSetting').dialog({
 		autoOpen : false,
 		width : 500,
 		buttons : {
-			"Ok" : function() {
+			"确认" : function() {
 				$(this).dialog("close");
 			},
-			"Cancel" : function() {
+			"取消" : function() {
 				$(this).dialog("close");
 			}
 		}
 	});
 
 	// Dialog Link
-	$('#dialog_link').click(function() {
-		$('#dialog').dialog('open');
+	$('.dialogRobotSetting_link').click(function() {
+		$('#dialogRobotSetting').dialog('open');
 		return false;
 	});
 
 	// hover states on the static widgets
-	$('#dialog_link, ul#icons li').hover(function() {
+	$('.dialogRobotSetting_link, ul#icons li').hover(function() {
 		$(this).addClass('ui-state-hover');
 	}, function() {
 		$(this).removeClass('ui-state-hover');
 	});
 	
-	setInterval("showHello()", 1000);
+	showHello();
+	setInterval("showHello()", 10000);
 
 });
 

@@ -56,6 +56,22 @@
 				<div id="content">
 					<div id="main">
 					
+							<!-- RobotSetting Dialog -->
+							<div id="dialogRobotSetting" title="设置机器人信息">
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+								<p>Welcome to <b>设置机器人信息!</b></p>
+							</div>
+							<!-- End of Dialog -->
+
 						<p>请选购您需要的机器人：</p>
 					
 						<div class="pad20">
@@ -72,7 +88,7 @@
 									<div>&nbsp;&nbsp;售价：${ t.price/100 } 元</div>
 									<div>&nbsp;&nbsp;售出：${ t.purchaseCount } 台</div>
 									<div>
-										<a href="#" class="smallbut" >[购买]</a>
+										<a href="#" id='${ t.prototypeId }' class="smallbut dialogRobotSetting_link" > &nbsp;[购买]</a>
 									</div>
 								</li>
 								

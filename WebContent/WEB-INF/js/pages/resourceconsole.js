@@ -266,7 +266,8 @@ $(function() {
 		}
 	});
 	
-	setInterval("showHello()", 1000);
+	showHello();
+	setInterval("showHello()", 10000);
 
 });
 
