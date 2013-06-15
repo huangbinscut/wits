@@ -66,7 +66,7 @@
 									</div>
 									<form:form commandName="robotCommand" method="POST">
 						
-						                <label for="robotName" class="label">机器人昵称:</label>
+						                <label for="robotName" class="label">机器人昵称:</label>     
 						                <form:input path="robotName"/>
 						                <br/>
 						
