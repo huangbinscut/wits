@@ -58,17 +58,54 @@
 					
 							<!-- RobotSetting Dialog -->
 							<div id="dialogRobotSetting" title="设置机器人信息">
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
-								<p>Welcome to <b>设置机器人信息!</b></p>
+								<!-- Robot Info -->
+								<div>
+									<div  id="robotError" class="message error close">
+									</div>
+									<div  id="robotSuccess" class="message success close">
+									</div>
+									<form:form commandName="robotCommand" method="POST">
+						
+						                <label for="robotName" class="label">机器人昵称:</label>
+						                <form:input path="robotName"/>
+						                <br/>
+						
+						                <label class="label">执行日志:</label>
+						                <input type="text" name="exeNew" value="${robotCommand.exeNew}" readonly="readonly" />
+						                	新 /
+						                <input type="text" name="exeCount" value="${robotCommand.exeCount}" readonly="readonly" />
+						                	总 
+						                	
+						                &nbsp;&nbsp;&nbsp;&nbsp;	
+						                	
+						                <label for="manufactureTime" class="label">购买日期:</label>
+						                <input type="text" name="manufactureTime" value="${robotCommand.manufactureTime}" readonly="readonly" />
+						                <br/>
+						
+						                <label for="description" class="label">备注:</label>
+						                <form:input path="description"/><br/>
+						
+						            </form:form>
+								</div>
+								<!-- End of Robot Info -->
+
+								<!-- Prototype Info -->
+								<div>
+									Welcome to <b>设置机器人信息!</b>
+								</div>
+								<!-- End of Prototype Info -->
+
+								<!-- Ability Info -->
+								<div>
+									Welcome to <b>设置机器人信息!</b>
+								</div>
+								<!-- End of Ability Info -->
+
+								<!-- Parameter Info -->
+								<div>
+									Welcome to <b>设置机器人信息!</b>
+								</div>
+								<!-- End of Parameter Info -->
 							</div>
 							<!-- End of Dialog -->
 
@@ -80,8 +117,8 @@
 							    <c:forEach items="${prototypePage.items}" var="t" varStatus="status">
 							
 								<li>
-									<a href="#" title='${ t.description }' class="tooltip bigbut">
-										<img src="<c:url value='/images/test/prototype.jpg' />" alt='${ t.description }' />
+									<a href="#" title='${ t.description }.(设计时间：${ t.designTime })' class="tooltip bigbut">
+										<img src="<c:url value='/images/test/prototype.jpg' />" alt='${ t.description }(设计时间：${ t.designTime })' />
 										<span>&lt;${ t.prototypeName }&gt;</span>
 									</a>
 									<div>&nbsp;&nbsp;类型：${ t.functionType }</div>
