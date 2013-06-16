@@ -64,7 +64,7 @@
 									</div>
 									<div  id="robotSuccess" class="message success close">
 									</div>
-									<form:form commandName="robotCommand" method="POST">
+<%-- 									<form:form commandName="robotCommand" method="POST">
 						
 						                <label for="robotName" class="label">机器人昵称:</label>     
 						                <form:input path="robotName"/>
@@ -86,7 +86,7 @@
 						                <form:input path="description"/><br/>
 						
 						            </form:form>
-								</div>
+ --%>								</div>
 								<!-- End of Robot Info -->
 
 								<!-- Prototype Info -->

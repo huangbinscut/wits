@@ -19,6 +19,7 @@ local.properties
 
 *.class
 classes/
+resource/
 
 
 # External tool builders
